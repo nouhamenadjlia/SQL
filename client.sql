@@ -5,6 +5,8 @@ mysql -u root --utilisateur ne posséde pas de mot de passe
 SHOW DATABASES;
 -- Creation de la BD
 CREATE DATABASE Ventes;
+--Utilisation de la bd
+use Ventes;
 
 
 
