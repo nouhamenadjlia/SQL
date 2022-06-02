@@ -22,7 +22,22 @@ CREATE TABLE clients(
     email VARCHAR(70), 
     telephone VARCHAR(20) NOT NULL
 );
--- Voir la desciption de la tabe 
+-- 6.Voir la desciption de la tabe 
 -- DESC <nom_table> ou DESCRIBE <nom_table>
 DESC clients;
 
+--7. modifier la table en ajoutant une nouvelle colonne
+ALTER TABLE clients ADD COLUMN postnom VARCHAR(50);
+-- modifier la table en ajoutant une nouvelle colonne apres un eautre
+    --ajoute postnom apres presnom
+    ALTER TABLE clients MODIFY COLUMN postnom VARCHAR(50) AFTER prenom;
+
+--8.LMD
+
+-- Lister(SELECT) les informations de toutes(*) les colonnes
+--       de la table(FROM) client
+SELECT* FROM CLIENTS;
+
+--9.insertion des données dans clients
+INSERT INTO clients(nom, prenom, email, telephone) VALUES ("nouha","menadjlia", "nouha.menadjlia@hotmail.fr", "08659725158"),("RAULIN","Ludovic","lraulin843@gmail.com","0621461941"),
+("Perez","Marion","marion.oceane.perez@gmail.com","0786842676");
