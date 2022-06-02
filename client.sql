@@ -1,22 +1,28 @@
 --Authentification/ connexion
 mysql -u root --utilisateur ne posséde pas de mot de passe
 --mysql -u root -p --utilisateur  posséde pas de mot de passe
--- lister les bases ded onnées existante
+--1. lister les bases ded onnées existante
 SHOW DATABASES;
--- Creation de la BD
+--2. Creation de la BD
 CREATE DATABASE Ventes;
---Utiliser de la bd
+--3.Utiliser de la bd
 use Ventes;
----- lister les tables de la base de données
---AUTO_INCREMENT: 
---PRIMARY KEY: marque la colonne comme étant la clé primaire
+--4. lister les tables de la base de données
+-- INTEGER : c'est le type entier
+-- NOT NULL : Cette colonne doit toujours contenir une information
+-- AUTO_INCREMENT : Dire à MYSQL de fournir de valeurs en incrementant
+--                  automatiquement les clés
 SHOW TABLES;
---Creation de la table clients
+
+--5.Creation de la table clients
 CREATE TABLE clients(
     id INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    nom VARCHAR (50) NOT NULL,
-    prenom VARCHAR (50) NOT NULL,
-    email VARCHAR (70), 
+    nom VARCHAR(50) NOT NULL,
+    prenom VARCHAR(50) NOT NULL,
+    email VARCHAR(70), 
     telephone VARCHAR(20) NOT NULL
 );
+-- Voir la desciption de la tabe 
+-- DESC <nom_table> ou DESCRIBE <nom_table>
+DESC clients;
 
