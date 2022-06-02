@@ -48,10 +48,10 @@ UPDATE clients SET postnom= "Tarzon", age=17 WHERE id= 1;
 --8.3.Supprimer en un element de la table clients 
 DELETE FROM clients WHERE id=7;
 
---ConfigurerMY
+--Configurer MySQL
+set sql_mode='STRICT_TRANS_TABLES';
+SHOW VARIABLES LIKE 'sql_mode'
 
-
-
---9.
+--9. Sélectionner des données de la bd 
 SELECT * FROM clients WHERE age>20;
 SELECT * FROM clients WHERE age>20 AND age<27;
