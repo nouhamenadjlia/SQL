@@ -44,3 +44,14 @@ INSERT INTO clients(nom, prenom, email, telephone) VALUES ("nouha","menadjlia", 
 --8.2.Mise à jour de donnée
 UPDATE clients SET telephone="0673460986"WHERE id =2;
 UPDATE clients SET postnom= "Tarzon", age=17 WHERE id= 1;
+
+--8.3.Supprimer en un element de la table clients 
+DELETE FROM clients WHERE id=7;
+
+--ConfigurerMY
+
+
+
+--9.
+SELECT * FROM clients WHERE age>20;
+SELECT * FROM clients WHERE age>20 AND age<27;
