@@ -38,6 +38,9 @@ ALTER TABLE clients ADD COLUMN postnom VARCHAR(50);
 --       de la table(FROM) client
 SELECT* FROM CLIENTS;
 
---9.insertion des données dans clients
+--8.1.insertion des données dans clients
 INSERT INTO clients(nom, prenom, email, telephone) VALUES ("nouha","menadjlia", "nouha.menadjlia@hotmail.fr", "08659725158"),("RAULIN","Ludovic","lraulin843@gmail.com","0621461941"),
 ("Perez","Marion","marion.oceane.perez@gmail.com","0786842676");
+--8.2.Mise à jour de donnée
+UPDATE clients SET telephone="0673460986"WHERE id =2;
+UPDATE clients SET postnom= "Tarzon", age=17 WHERE id= 1;
